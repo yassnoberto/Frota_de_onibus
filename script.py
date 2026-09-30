@@ -14,4 +14,10 @@ linhas_lapa = s.get(
     "http://api.olhovivo.sptrans.com.br/v2.1/Linha/Buscar?termosBusca=Lapa"
 )
 linhas_lapa = linhas_lapa.json()
-linhas_lapa[:3]
+print(linhas_lapa[:3])
+
+res = s.get(
+    "http://api.olhovivo.sptrans.com.br/v2.1/Parada/BuscarParadasPorLinha?codigoLinha=2506"
+)
+paradas = res.json()
+print(paradas[:3])
